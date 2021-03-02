@@ -7,12 +7,7 @@ const Home = ({navigation}) => {
   const [data, setData] = React.useState({});
 
   React.useEffect(() => {
-    Axios.get('https://api.jsonbin.io/b/603deef49342196a6a6b6e4d', {
-      headers: {
-        'secret-key':
-          '$2b$10$XVA6uIeILpiXpxqgFYx8n.IklrVk1TdSlHLc8EaCP9AI89VcehrCS',
-      },
-    })
+    Axios.get('https://api.jsonbin.io/b/603e131481087a6a8b9456d1/1')
       .then((res) => {
         setData(res.data.Global);
       })
@@ -21,12 +16,6 @@ const Home = ({navigation}) => {
       });
   }, []);
 
-  Axios.get('https://api.jsonbin.io/b/603deef49342196a6a6b6e4d', {
-    headers: {
-      'secret-key':
-        '$2b$10$XVA6uIeILpiXpxqgFYx8n.IklrVk1TdSlHLc8EaCP9AI89VcehrCS',
-    },
-  });
 
   return (
   <View style={{flex: 1}}>
